@@ -1,4 +1,48 @@
-baseURL: "http://hugo-quickstart-template.netlify.com"
-languageCode: "en-us"
-title: "Netlify + Hugo Quickstart"
-theme: "netlify-basic"
+baseurl: /
+languageCode: en-us
+theme: github.com/panr/hugo-theme-terminal/v4
+pagination:
+  pagerSize: 5
+markup:
+  highlight:
+    noClasses: false
+params:
+  contentTypeName: posts
+  showMenuItems: 2
+  showLanguageSelector: false
+  fullWidthTheme: false
+  centerTheme: false
+  autoCover: true
+  showLastUpdated: false
+  twitter:
+    creator: ""
+    site: ""
+languages:
+  en:
+    languageName: English
+    title: Clark Seanor
+    params:
+      subtitle: Software development
+      owner: ""
+      keywords: ""
+      copyright: ""
+      menuMore: Show more
+      readMore: Read more
+      readOtherPosts: Read other posts
+      newerPosts: Newer posts
+      olderPosts: Older posts
+      missingContentMessage: Page not found...
+      missingBackButtonLabel: Back to home page
+      minuteReadingTime: min read
+      words: words
+      logo:
+        logoText: Clark Seanor
+        logoHomeLink: /
+    menu:
+      main:
+        - identifier: about
+          name: About
+          url: /about
+        - identifier: showcase
+          name: Showcase
+          url: /showcase
