@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snek.</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link type = 'text/css' rel = 'stylesheet' href = 'css/style.css'>
+
+    <script src="js/CanvasController.js"></script>
+    <script src="js/ColorShifter.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+
+            initCanvas(canvas, ctx);
+            cycleHuesByClassName('rainbow');
+            
+            var snake = document.getElementById('snek-image');
+            var messagebox = document.getElementById('message-box');
+            
+            snake.addEventListener('focusin', function() {messagebox.innerText = 'no boop the snoot >:(';
+                                                            snake.src = 'img/snekanger.jpg';
+                                                            snake.alt = 'An angry snek. You are booping its snoot. No boop the snoot.'}, false);
+
+            snake.addEventListener('focusout', function() {messagebox.innerText = 'happy snek';
+                                                            snake.src = 'img/snekhappy.jpg';
+                                                            snake.alt = 'A happy snek. You are no longer booping the snoot.'}, false);
+
+            snake.addEventListener('mouseenter', function() {messagebox.innerText = 'no boop the snoot >:(';
+                                                            snake.src = 'img/snekanger.jpg';
+                                                            snake.alt = 'An angry snek. You are booping its snoot. No boop the snoot.'}, false);
+
+            snake.addEventListener('mouseout', function() {messagebox.innerText = 'happy snek';
+                                                            snake.src = 'img/snekhappy.jpg';
+                                                            snake.alt = 'A happy snek. You are no longer booping the snoot.'}, false);
+
+        }
+    </script>
+
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div id="content">
+        <header>
+            <h1 id="heading" class="rainbow">Snek.</h1>
+        </header>
+        <img id="snek-image" src="img/snekhappy.jpg" alt="A happy snek" tabindex="0"/>
+	<p id="credit">This <a class="rainbow" href="https://flic.kr/p/2132c8">snek photo</a> is from <a class="rainbow" href="https://www.flickr.com/photos/art-sarah/">ArtBrom</a>, licensed under <a class="rainbow" href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=rich">CC-BY-SA 2.0</a>. A project by <a class="rainbow" href="/">Clark Seanor</a>.</p>
+        <p class="rainbow" id="message-box" aria-live="polite">happy snek</p>
+    </div>
+</body>
+</html>

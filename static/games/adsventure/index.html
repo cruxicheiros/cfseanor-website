@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Sven Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <script src="game.js"></script>
+    <script>
+        window.onload = game;
+    </script>
+</head>
+
+<body>
+    <div id="all-container">
+        <div id="content">
+            <h1 class="caps">
+                Adsventure Game
+            </h1>
+            <div id="game-container" class="main" aria-live="polite" aria-atomic="true">
+                <div id="image-container">
+                    <img id="game-image" src="img/titlecard.png" />
+                </div>
+                <div id="text-container">
+                    <div id="text-title" class="caps">
+                    </div>
+                    <div id="text-description">
+                    </div>
+                </div>
+                <div id="controller">
+                    <button class="caps" type="button" id="button-A">
+                    </button>
+                    <button class="caps" type="button" id="button-B">
+                    </button>
+                    <button class="caps" type="button" id="button-C">
+                    </button>
+                    <button class="caps" type="button" id="button-D">
+                    </button>
+                </div>
+            </div>
+            <div id="help-container" class="main">
+                <details>
+                    <summary>About</summary>
+                    <p>
+    Adsventure Game is an interactive fiction "game" about Sven. Sven is a dog. That's basically all there is to it.
+                    </p>
+                    <p>
+    It was programmed in 2020 by <a href="/">Clark Seanor</a> who unfortunately also did the art.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Options</summary>
+                    <p>
+                        <form>
+                            <label for="caps-control">Turn caps-lock off.</label>
+                            <input id="caps-control" name="caps-control" type="checkbox"/>
+                        </form>
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	
+        <title>Algoscarf.</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <link href="style.css" rel = 'stylesheet' type = 'text/css'>
+        <script src="generator.js"></script>
+
+        <script> 
+            function displayScarf() {
+                var scarf = document.getElementById('scarf');
+                var scarfLength = 400;
+                var scarfHeight = 100;
+                var scarfPattern = generateScarfPattern();
+                var stripeWidth = scarfLength / scarfPattern.length;
+
+                scarf.innerHTML = '';
+
+                for (var i = 0; i < scarfPattern.length; i++) {
+                    var stripe = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+
+                    stripe.setAttribute('y', 0);
+                    stripe.setAttribute('x', i*stripeWidth);
+                    stripe.setAttribute('width', stripeWidth);
+                    stripe.setAttribute('height', scarfHeight);
+                    stripe.setAttribute('fill', 'rgb(' + scarfPattern[i].r + ',' + scarfPattern[i].g + ',' + scarfPattern[i].b + ')');
+                    scarf.appendChild(stripe);
+                }
+
+            }
+
+            window.addEventListener('load', function () {
+                displayScarf();
+		setInputOutlineColors();
+		var selectors = document.getElementsByClassName('color-select');
+		
+		for (var i=0; i<selectors.length; i++) {
+                    selectors[i].addEventListener('change', setInputOutlineColors);
+		}
+
+                document.getElementById('generate_scarf').addEventListener('click', displayScarf);
+            });
+
+        </script>
+
+
+    </head>
+    <body>
+        <h1>Algoscarf.</h1>
+        <p class="subheading">scarf generator</p>
+        <form>
+            <label for="algorithm">Select an algorithm</label>
+            <select id = "algorithm" name = 'Algorithm'>
+                <option value = 'insertion_sort'>Insertion Sort</option>
+                <option value = 'cocktail_shaker_sort'>Cocktail Shaker Sort</option>
+                <option value = 'bubble_sort'>Bubble Sort</option>
+            </select>
+
+            <label for="sort-by">Sort colors by: </label>
+            <select id = "sort-by" name = 'Sort by'>
+                <option value = 'red'>Redness</option>
+                <option value = 'blue'>Blueness</option>
+                <option value = 'green'>Greenness</option>
+                <option value = 'hue'>Hue</option>
+                <option value = 'saturation'>Saturation</option>
+                <option value = 'value'>Value</option>
+            </select>
+
+            <label for="order">Select an order: </label>
+            <select id = 'order' name = 'Order'>
+                <option value = 'ascending'>Ascending</option>
+                <option value = 'descending'>Descending</option>
+            </select>
+
+            <label for = "color-picker">Select some colors...</label>
+            <div id = color-picker>
+                <input class="color-select" value="81AB41">
+                <input class="color-select" value="57FFF9">
+                <input class="color-select" value="EF6767">
+                <input class="color-select" value="DEAD00">
+            </div>
+
+            <input type = button id = 'generate_scarf' value = 'Generate Scarf'>
+        </form>
+
+        <svg id = 'scarf' width="400" height = "100">
+        </svg>
+
+	<div id = 'footing'><a href="./about.html">About Algoscarf</a> | A project by <a href="/">Clark Seanor</a> (circa 2017)</div>
+    </body>
+</html>

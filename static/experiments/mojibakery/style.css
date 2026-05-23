@@ -1,0 +1,19 @@
+textarea {
+  display: block;
+  width: 20em;
+}
+
+body {
+  font-family: monospace;
+}
+
+.bakery-container {
+  margin: auto;
+  width: 20em;
+}
+
+#error-box {
+  color: darkred;
+  min-height: 2em;
+}
+

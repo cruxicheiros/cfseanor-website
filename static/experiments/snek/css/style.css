@@ -1,0 +1,38 @@
+a {pointer-events: all;}
+
+canvas {
+    height: 100%;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#content {
+    font-family: 'Patua One', cursive;
+    margin: 40px auto;
+    pointer-events: none;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+#credit {font-size: 10px;}
+
+#heading {
+    color: hsl(313, 100%, 54%);
+    font-size: 70px;
+}
+
+#message-box {font-size: 30px;}
+
+#snek-image {
+    border-radius: 30px;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 60%;
+    pointer-events: all;
+}

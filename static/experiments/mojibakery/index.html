@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mojibakery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <script>
+      window.onload = bindFunctions;
+    </script>
+    <div class="bakery-container">
+      <h1>
+      Mojibakery 🍞
+      </h1>
+      <form>
+        <div id = "error-box">
+    
+        </div>
+    
+        <label for="input">Input Text</label> - <span id="char-count" aria-live="polite">0 characters</span>
+        <textarea name="input" id="input" type="textarea"></textarea>
+
+        <label for="output">Output Text</label>
+        <textarea name="output" id="output" type="textarea" aria-live="polite"></textarea>
+    
+        <button id="bake" type="button">
+          Bake
+        </button>
+        <button id="unbake" type="button">
+          Unbake
+        </button>
+      </form>
+      <p>Bake pairs of characters that fit into a single byte into characters that fit into two bytes, or do the opposite by unbaking them.</p>
+
+      <p>
+      	A project by <a href="/">Clark Seanor</a> (2019).
+      </p>
+    </div>
+  </body>
+</html>
