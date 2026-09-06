@@ -4,7 +4,7 @@ date: 2025-08-23T17:52:16+01:00
 tags: ["reviews", "quakers", "quiet-faith-loud-opinions"]
 author: "Clark Seanor"
 draft: false
-summary: "In her 2020 book Hatred: Understanding our Most Dangerous Emotion, Berit Brogaard presents a complex but not comprehensive analysis of the emotion of hatred."
+description: "In her 2020 book Hatred: Understanding our Most Dangerous Emotion, Berit Brogaard presents a complex but not comprehensive analysis of the emotion of hatred."
 ---
 
 *Content note: in this review, I discuss transphobia, transmisogyny, suicide, racism, and sexual assault.*

@@ -2,7 +2,7 @@
 title: "What Sex Matters to Quakers can teach us about transphobic hate in a religious context"
 date: 2025-12-21T19:28:48Z
 draft: false
-summary: If you go on X, one of many accounts you'll find screaming into the void about trans people is operated by Sex Matters to Quakers.
+description: If you go on X, one of many accounts you'll find screaming into the void about trans people is operated by Sex Matters to Quakers.
 tags: ["gender", "quakers", "quiet-faith-loud-opinions"]
 author: "Clark Seanor"
 ---
